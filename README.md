@@ -1,6 +1,6 @@
 <div align='center'>
 
-<img src=https://i.ibb.co/X7T8h4K/removal-ai-a84c2b95-b237-4c04-add0-3ab8754597be-aihub-PDDORY.png alt="logo" width=100 height=100 />
+<img src=https://i.ibb.co/X7T8h4K/removal-ai-a84c2b95-b237-4c04-add0-3ab8754597be-aihub-PDDORY.png alt="logo" width=200 height=200 />
 
 <h1>AI-HUB</h1>
 <p>AI TEXT TO IMAGE, AI IMAGE TO TEXT, AI TEXT GENERATION, AI TEXT TO SPEECH, AND MORE</p>
