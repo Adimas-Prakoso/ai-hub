@@ -1,0 +1,10 @@
+openai==0.28.0
+requests
+diffusers
+torch==2.1.0
+torchvision
+torchaudio
+PySide6
+PyQt6
+gtts
+Pillow
