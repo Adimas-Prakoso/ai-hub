@@ -52,7 +52,7 @@
 | Text Color | ![#EEEEEE](https://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
 
 ### :key: Environment Variables
-To run this project, you will need to add the following environment variables to your .env file
+To run this project, you will need to add the following variables to config.json
 
 `huggingface_apikey`
 
