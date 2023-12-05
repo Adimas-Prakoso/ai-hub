@@ -539,9 +539,8 @@ class TxtGen(QMainWindow):
     def generate(self):
         if self.ui.apis.isChecked():
             text = self.ui.text.toPlainText()
-            res = textgen(text)
-            p = res[0]
-            self.ui.text.setText(p['generated_text'])
+            self.ui.text.setText(textgen(prompt=text)[0]['generated_text'])
+            print(textgen(prompt=text)[0]['generated_text'])
         else:
             self.mess.show()
 
@@ -674,10 +673,10 @@ class Conversation(QMainWindow):
     
     def generate(self):
         teks = self.ui.prompt.toPlainText()
+        self.ui.chat_list.addItem(f'You: {teks}')
         j = open("./config.json")
         data = json.load(j)
         models = data["chat_models"]
-        self.ui.chat_list.addItem(f'You: {teks}')
         res = ChatModels(text=teks, models=models)
         self.ui.chat_list.addItem(f'AI: {insert_newline(res)}')
         pass
@@ -951,7 +950,6 @@ class SplashScreen(QMainWindow):
 
         # INCREASE COUNTER
         counter += 1
-
 
 
 

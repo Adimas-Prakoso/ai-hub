@@ -11,9 +11,9 @@ def ChatModels(models, text):
         res = get.json()
         mess = res["respon"]
     elif 'BARD-AI' in models:
-        get = requests.get(f"https://api.akuari.my.id/ai/gbard?chat={text}")
+        get = requests.get(f"https://api.xcodeteam.xyz/api/artificial-intelligence/bard?api_key={xcode_apikey}&question={text}")
         res = get.json()
-        mess = res["respon"]
+        mess = res["data"]["answer"]
     elif 'SIM-SIMI' in models:
         get = requests.get(f"https://api.akuari.my.id/simi/simi2?query={text}")
         res = get.json()
