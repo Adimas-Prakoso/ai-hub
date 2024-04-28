@@ -12,4 +12,3 @@ def query(prompt, api_url):
     headers = {"Authorization": huggingface_apikey}
     response = requests.post(api_url, headers=headers, json=payload)
     return response.content
-    
