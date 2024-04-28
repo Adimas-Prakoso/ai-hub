@@ -1,5 +1,4 @@
 import requests
-from io import BytesIO
 
 def maker(models, text1, name):
     photooxy1 = f'https://muddy-foal-bathing-suit.cyclic.app/photooxy-1?text={text1}&url='

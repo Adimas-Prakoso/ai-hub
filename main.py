@@ -1,7 +1,6 @@
 import sys
-from PySide6 import QtCore, QtGui, QtWidgets
-from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
+from PySide6 import QtCore, QtGui
+from PySide6.QtGui import (QColor, QPixmap, )
 from PySide6.QtWidgets import *
 import io
 from PIL import Image
@@ -16,7 +15,6 @@ from lib.ui_main import Ui_MainWindow
 from lib.window.ui_tti import Ui_TextToImage
 from lib.window.ui_ttv import Ui_TextToVideo
 from lib.window.ui_ittxt import Ui_ImageToText
-from lib.window.ui_iti import Ui_ITI
 from lib.window.ui_question import Ui_Question
 from lib.window.ui_tg import Ui_TextGen
 from lib.window.ui_ttc import Ui_TextToCode
