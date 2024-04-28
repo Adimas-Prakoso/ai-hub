@@ -148,7 +148,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "Linaqruf/animagine-xl-2.0":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/Linaqruf/animagine-xl-2.0", prompt=self.ui.prompt.toPlainText())
@@ -156,7 +155,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "SimianLuo/LCM_Dreamshaper_v7":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/SimianLuo/LCM_Dreamshaper_v7", prompt=self.ui.prompt.toPlainText())
@@ -164,7 +162,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "stabilityai/stable-diffusion-2-1":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/stabilityai/stable-diffusion-2-1", prompt=self.ui.prompt.toPlainText())
@@ -172,7 +169,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "prompthero/openjourney-v4":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/prompthero/openjourney-v4", prompt=self.ui.prompt.toPlainText())
@@ -180,7 +176,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "nerijs/pixel-art-xl":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/nerijs/pixel-art-xl", prompt=self.ui.prompt.toPlainText())
@@ -188,7 +183,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "segmind/SSD-1B":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/segmind/SSD-1B", prompt=self.ui.prompt.toPlainText())
@@ -196,7 +190,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "CompVis/stable-diffusion-v1-4":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4", prompt=self.ui.prompt.toPlainText())
@@ -204,7 +197,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "openskyml/dalle-3-xl":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/openskyml/dalle-3-xl", prompt=self.ui.prompt.toPlainText())
@@ -212,7 +204,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "hakurei/waifu-diffusion":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/hakurei/waifu-diffusion", prompt=self.ui.prompt.toPlainText())
@@ -220,7 +211,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "Lykon/dreamshaper-7":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/Lykon/dreamshaper-7", prompt=self.ui.prompt.toPlainText())
@@ -228,7 +218,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "Linaqruf/style-enhancer-xl-lora":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/Linaqruf/style-enhancer-xl-lora", prompt=self.ui.prompt.toPlainText())
@@ -236,7 +225,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "gsdf/Counterfeit-V2.5":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/gsdf/Counterfeit-V2.5", prompt=self.ui.prompt.toPlainText())
@@ -244,7 +232,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "Linaqruf/sketch-style-xl-lora":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/Linaqruf/sketch-style-xl-lora", prompt=self.ui.prompt.toPlainText())
@@ -252,7 +239,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "digiplay/majicMIX_realistic_v1":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/digiplay/majicMIX_realistic_v1", prompt=self.ui.prompt.toPlainText())
@@ -260,7 +246,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "Linaqruf/animagine-xl":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/Linaqruf/animagine-xl", prompt=self.ui.prompt.toPlainText())
@@ -268,7 +253,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "stablediffusionapi/anime-model-v2":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/stablediffusionapi/anime-model-v2", prompt=self.ui.prompt.toPlainText())
@@ -276,7 +260,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "stablediffusionapi/animexl-xuebimix":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/stablediffusionapi/animexl-xuebimix", prompt=self.ui.prompt.toPlainText())
@@ -284,7 +267,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "Yntec/realistic-vision-v12":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/Yntec/realistic-vision-v12", prompt=self.ui.prompt.toPlainText())
@@ -292,7 +274,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "stablediffusionapi/realistic-vision-v51":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/stablediffusionapi/realistic-vision-v51", prompt=self.ui.prompt.toPlainText())
@@ -300,7 +281,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "stablediffusionapi/beautiful-realistic-asian":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/stablediffusionapi/beautiful-realistic-asian", prompt=self.ui.prompt.toPlainText())
@@ -308,7 +288,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "stablediffusionapi/realistic-vi":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/stablediffusionapi/realistic-vi", prompt=self.ui.prompt.toPlainText())
@@ -316,7 +295,6 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
                     elif selected_item == "digiplay/majicMIX_realistic_v6":#
                         nama_file = nama()
                         img_binary = query(api_url="https://api-inference.huggingface.co/models/digiplay/majicMIX_realistic_v6", prompt=self.ui.prompt.toPlainText())
@@ -324,10 +302,8 @@ class TtiWindow(QMainWindow):
                         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
                         self.ui.hasil.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
                         self.saved.show()
-                        pass
             else:
                 self.mess.show()
-            pass
 
         self.ui.generate.clicked.connect(lambda: generate())
         self.ui.frame_3.mousePressEvent = self.moveWindow
@@ -415,11 +391,9 @@ class TtvWindow(QMainWindow):
 
         def setInterferanceStep():
             self.ui.num_inference_steps.setText("25")
-            pass
 
         def setNumFrames():
             self.ui.num_frames.setText("200")
-            pass
 
         def generate():
             p = self.ui.num_frames.text()
@@ -436,7 +410,6 @@ class TtvWindow(QMainWindow):
                             self.device.show()
                         else:
                             print(video_path)
-                        pass
                     else:
                         self.mess.show()
 
@@ -573,7 +546,6 @@ class TextToCode(QMainWindow):
         else:
             res = generate_code(prompt=self.ui.prompt.toPlainText())
             self.ui.code.setText(res)
-        pass
 
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
@@ -604,7 +576,6 @@ class TextToMusic(QMainWindow):
         else:
             res = generate_music(prompt=self.ui.prompt.toPlainText())
             convert_audio_bytes_to_wav(audio_bytes=res, output_path=f"./res/saved/ai-hub-{nama_file}.wav")
-        pass
 
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
@@ -641,7 +612,6 @@ class TTS(QMainWindow):
             parts = text.split(separator, 1)
             code = parts[1] if len(parts) > 1 else parts[0]
             text_to_speech(text=self.ui.prompt.toPlainText(), language=code, output_file=f"./res/saved/ai-hub-{nama_file}.mp3")
-        pass
 
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
@@ -679,7 +649,6 @@ class Conversation(QMainWindow):
         models = data["chat_models"]
         res = ChatModels(text=teks, models=models)
         self.ui.chat_list.addItem(f'AI: {insert_newline(res)}')
-        pass
 
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
@@ -748,7 +717,6 @@ class OpenSettings(QMainWindow):
             # Simpan perubahan ke file
             with open("config.json", "w") as f:
                 json.dump(data, f)
-        pass
 
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
@@ -782,7 +750,6 @@ class Maker(QMainWindow):
         image.save(f'./res/saved/ai-hub-{nama_file}.jpg', 'JPEG')
         self.ui.label_4.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
         self.saved.show()
-        pass
 
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
