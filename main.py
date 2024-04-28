@@ -100,7 +100,7 @@ class TtiWindow(QMainWindow):
         # REMOVE TITLE BAR
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        
+
         self.ui.close_btn.clicked.connect(lambda: self.close())
         self.ui.models.addItem("runwayml/stable-diffusion-v1-5")#
         self.ui.models.addItem("Linaqruf/animagine-xl-2.0")#
@@ -126,16 +126,16 @@ class TtiWindow(QMainWindow):
         self.ui.models.addItem("stablediffusionapi/beautiful-realistic-asian")#
         self.ui.models.addItem("stablediffusionapi/realistic-vi")#
         self.ui.models.addItem("digiplay/majicMIX_realistic_v6")#
-        
+
         self.mess = RenderMess()
         self.saved = SavedMess()
         self.prompt = PromptMess()
-        
+
         selected_item = self.ui.models.currentText()
         if selected_item in ["runwayml/stable-diffusion-v1-5","Linaqruf/animagine-xl-2.0","SimianLuo/LCM_Dreamshaper_v7", "stabilityai/stable-diffusion-2-1", "prompthero/openjourney-v4", "nerijs/pixel-art-xl", "segmind/SSD-1B", "CompVis/stable-diffusion-v1-4", "openskyml/dalle-3-xl", "hakurei/waifu-diffusion", "Linaqruf/anime-detailer-xl-lora", "Lykon/dreamshaper-7", "Linaqruf/style-enhancer-xl-lora", "gsdf/Counterfeit-V2.5", "Linaqruf/sketch-style-xl-lora", "digiplay/majicMIX_realistic_v1", "Linaqruf/animagine-xl", "stablediffusionapi/anime-model-v2", "stablediffusionapi/animexl-xuebimix", "Yntec/realistic-vision-v12", "stablediffusionapi/realistic-vision-v51", "stablediffusionapi/beautiful-realistic-asian", "stablediffusionapi/realistic-vi", "digiplay/majicMIX_realistic_v6"]:
             self.ui.cpu.hide()
             self.ui.cuda.hide()
-            
+
         def generate():
             if self.ui.apis.isChecked():
                 if self.ui.prompt.toPlainText() == "":
@@ -328,10 +328,10 @@ class TtiWindow(QMainWindow):
             else:
                 self.mess.show()
             pass
-        
+
         self.ui.generate.clicked.connect(lambda: generate())
         self.ui.frame_3.mousePressEvent = self.moveWindow
-    
+
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
             self.clickPosition = event.globalPos()
@@ -342,8 +342,8 @@ class TtiWindow(QMainWindow):
             self.move(self.pos() + event.globalPos() - self.clickPosition)
             self.clickPosition = event.globalPos()
             event.accept()
-        
-        
+
+
 class RenderMess(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -353,7 +353,7 @@ class RenderMess(QMainWindow):
         # REMOVE TITLE BAR
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        
+
 class SavedMess(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -365,7 +365,7 @@ class SavedMess(QMainWindow):
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         nama_file = nama()
         self.ui.message.setText(f"File Saved at ./res/saved/")
-        
+
 class PromptMess(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -375,7 +375,7 @@ class PromptMess(QMainWindow):
         # REMOVE TITLE BAR
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        
+
 class ChekMess(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -385,7 +385,7 @@ class ChekMess(QMainWindow):
         # REMOVE TITLE BAR
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        
+
 class NoSupport(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -395,7 +395,7 @@ class NoSupport(QMainWindow):
         # REMOVE TITLE BAR
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        
+
 class TtvWindow(QMainWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self)
@@ -412,15 +412,15 @@ class TtvWindow(QMainWindow):
         self.mess = RenderMess()
         self.ceks = ChekMess()
         self.device = NoSupport()
-        
+
         def setInterferanceStep():
             self.ui.num_inference_steps.setText("25")
             pass
-        
+
         def setNumFrames():
             self.ui.num_frames.setText("200")
             pass
-        
+
         def generate():
             p = self.ui.num_frames.text()
             q = self.ui.num_inference_steps.text()
@@ -439,12 +439,12 @@ class TtvWindow(QMainWindow):
                         pass
                     else:
                         self.mess.show()
-        
+
         self.ui.set_default1.clicked.connect(lambda: setInterferanceStep())
         self.ui.set_defautl2.clicked.connect(lambda: setNumFrames())
         self.ui.generate.clicked.connect(lambda: generate())
         self.ui.frame_3.mousePressEvent = self.moveWindow
-    
+
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
             self.clickPosition = event.globalPos()
@@ -455,7 +455,7 @@ class TtvWindow(QMainWindow):
             self.move(self.pos() + event.globalPos() - self.clickPosition)
             self.clickPosition = event.globalPos()
             event.accept()
-        
+
 class IttxtWindow(QMainWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self)
@@ -469,19 +469,19 @@ class IttxtWindow(QMainWindow):
         self.ui.select_file.clicked.connect(lambda: self.open_file_dialog())
         self.ui.generate.clicked.connect(lambda: self.generate())
         self.ui.close_btn.clicked.connect(lambda: self.close())
-        
+
     def generate(self):
         path = self.ui.path.text()
         captions = imagetotext(image_path=path)
         get = captions[0]
         res = get["generated_text"]
         self.ui.hasil.setText(res)
-        
+
     def open_file_dialog(self):
         file_name = QFileDialog.getOpenFileName()
         path = file_name[0]
         self.ui.path.setText(path)
-        
+
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
             self.clickPosition = event.globalPos()
@@ -492,7 +492,7 @@ class IttxtWindow(QMainWindow):
             self.move(self.pos() + event.globalPos() - self.clickPosition)
             self.clickPosition = event.globalPos()
             event.accept()
-            
+
 class QAWindow(QMainWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self)
@@ -504,7 +504,7 @@ class QAWindow(QMainWindow):
         self.ui.close_btn.clicked.connect(lambda: self.close())
         self.ui.generate.clicked.connect(lambda: self.generate())
         self.mess = RenderMess()
-    
+
     def generate(self):
         if self.ui.apis.isChecked():
             question = self.ui.question.toPlainText()
@@ -513,7 +513,7 @@ class QAWindow(QMainWindow):
             self.ui.label_2.setText(res["answer"])
         else:
             self.mess.show()
-        
+
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
             self.clickPosition = event.globalPos()
@@ -535,7 +535,7 @@ class TxtGen(QMainWindow):
         self.ui.frame_3.mousePressEvent = self.moveWindow
         self.mess = RenderMess()
         self.ui.generate.clicked.connect(lambda: self.generate())
-        
+
     def generate(self):
         if self.ui.apis.isChecked():
             text = self.ui.text.toPlainText()
@@ -554,7 +554,7 @@ class TxtGen(QMainWindow):
             self.move(self.pos() + event.globalPos() - self.clickPosition)
             self.clickPosition = event.globalPos()
             event.accept()
-            
+
 class TextToCode(QMainWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self)
@@ -566,7 +566,7 @@ class TextToCode(QMainWindow):
         self.ui.headers.mousePressEvent = self.moveWindow
         self.ui.generate.clicked.connect(lambda: self.generate())
         self.prompt = PromptMess()
-        
+
     def generate(self):
         if self.ui.prompt.toPlainText() == "":
             self.prompt.show()
@@ -579,13 +579,13 @@ class TextToCode(QMainWindow):
         if event.button() == QtCore.Qt.LeftButton:
             self.clickPosition = event.globalPos()
             event.accept()
-    
+
     def mouseMoveEvent(self, event):
         if event.buttons() == QtCore.Qt.LeftButton:
             self.move(self.pos() + event.globalPos() - self.clickPosition)
             self.clickPosition = event.globalPos()
             event.accept()
-            
+
 class TextToMusic(QMainWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self)
@@ -596,7 +596,7 @@ class TextToMusic(QMainWindow):
         self.ui.frame_3.mousePressEvent = self.moveWindow
         self.ui.generate.clicked.connect(lambda: self.generate())
         self.prompt = PromptMess()
-        
+
     def generate(self):
         nama_file = nama()
         if self.ui.prompt.toPlainText() == "":
@@ -610,13 +610,13 @@ class TextToMusic(QMainWindow):
         if event.button() == QtCore.Qt.LeftButton:
             self.clickPosition = event.globalPos()
             event.accept()
-            
+
     def mouseMoveEvent(self, event):
         if event.buttons() == QtCore.Qt.LeftButton:
             self.move(self.pos() + event.globalPos() - self.clickPosition)
             self.clickPosition = event.globalPos()
             event.accept()
-            
+
 class TTS(QMainWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self)
@@ -630,7 +630,7 @@ class TTS(QMainWindow):
         languages = lang.tts_langs()
         for code, name in languages.items():
             self.ui.comboBox.addItem(f'{name} - {code}')
-        
+
     def generate(self):
         nama_file = nama()
         if self.ui.prompt.toPlainText() == "":
@@ -647,13 +647,13 @@ class TTS(QMainWindow):
         if event.button() == QtCore.Qt.LeftButton:
             self.clickPosition = event.globalPos()
             event.accept()
-    
+
     def mouseMoveEvent(self, event):
         if event.buttons() == QtCore.Qt.LeftButton:
             self.move(self.pos() + event.globalPos() - self.clickPosition)
             self.clickPosition = event.globalPos()
             event.accept()
-            
+
 class Conversation(QMainWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self)
@@ -667,10 +667,10 @@ class Conversation(QMainWindow):
         self.setting = OpenSettings()
         self.ui.settings.clicked.connect(lambda: self.settings())
         self.ui.chat_list.setWordWrap(True)
-        
+
     def settings(self):
         self.setting.show()
-    
+
     def generate(self):
         teks = self.ui.prompt.toPlainText()
         self.ui.chat_list.addItem(f'You: {teks}')
@@ -680,18 +680,18 @@ class Conversation(QMainWindow):
         res = ChatModels(text=teks, models=models)
         self.ui.chat_list.addItem(f'AI: {insert_newline(res)}')
         pass
-    
+
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
             self.clickPosition = event.globalPos()
             event.accept()
-    
+
     def mouseMoveEvent(self, event):
         if event.buttons() == QtCore.Qt.LeftButton:
             self.move(self.pos() + event.globalPos() - self.clickPosition)
             self.clickPosition = event.globalPos()
             event.accept()
-            
+
 class OpenSettings(QMainWindow):
     def __init__(self, parent=None):
         QMainWindow.__init__(self)
@@ -705,7 +705,7 @@ class OpenSettings(QMainWindow):
         self.ui.comboBox.addItem("SIM-SIMI")
         self.ui.comboBox.addItem("CHATTY-AI")
         self.ui.pushButton.clicked.connect(lambda: self.generate())
-        
+
     def generate(self):
         if self.ui.comboBox.currentText() == "GPT-3.5":
             # Buka file config.json
@@ -749,18 +749,18 @@ class OpenSettings(QMainWindow):
             with open("config.json", "w") as f:
                 json.dump(data, f)
         pass
-    
+
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
             self.clickPosition = event.globalPos()
             event.accept()
-    
+
     def mouseMoveEvent(self, event):
         if event.buttons() == QtCore.Qt.LeftButton:
             self.move(self.pos() + event.globalPos() - self.clickPosition)
             self.clickPosition = event.globalPos()
             event.accept()
-            
+
 class Maker(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
@@ -772,7 +772,7 @@ class Maker(QMainWindow):
         self.ui.effect_list.addItems(photooxy_list)
         self.ui.generate.clicked.connect(lambda: self.generate())
         self.saved = SavedMess()
-    
+
     def generate(self):
         nama_file = nama()
         models="PhotoOxy"
@@ -783,7 +783,7 @@ class Maker(QMainWindow):
         self.ui.label_4.setPixmap(QPixmap(f'./res/saved/ai-hub-{nama_file}.jpg'))
         self.saved.show()
         pass
-    
+
     def moveWindow(self, event):
         if event.button() == QtCore.Qt.LeftButton:
             self.clickPosition = event.globalPos()
@@ -798,7 +798,7 @@ class Maker(QMainWindow):
 class MainWindow(QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
-                
+
          # Initialize UI
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
@@ -824,35 +824,35 @@ class MainWindow(QMainWindow):
         self.window9 = TTS()
         self.window10 = Conversation()
         self.window11 = Maker()
-        
+
         self.ui.frame_10.hide()
         def openWindow2():
             self.window2.show()
 
         def openWindow3():
             self.window3.show()
-            
+
         def openWindow4():
             self.window4.show()
-            
+
         def openWindow5():
             self.window5.show()
-            
+
         def openWindow6():
             self.window6.show()
-        
+
         def openWindow7():
             self.window7.show()
-            
+
         def openWindow8():
             self.window8.show()
-            
+
         def openWindow9():
             self.window9.show()
-            
+
         def openWindow10():
             self.window10.show()
-            
+
         def openWindow11():
             self.window11.show()
 
@@ -919,7 +919,7 @@ class SplashScreen(QMainWindow):
         QtCore.QTimer.singleShot(5000, lambda: self.ui.label_loading.setText("<strong>CHECKING</strong> UPDATES"))
         QtCore.QTimer.singleShot(7000, lambda: self.ui.label_loading.setText("<strong>INITIALIZING</strong> APPLICATION"))
         QtCore.QTimer.singleShot(9000, lambda: self.ui.label_loading.setText("<strong>DONE</strong> "))
-        
+
 
 
         ## SHOW ==> MAIN WINDOW
