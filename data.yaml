@@ -1,0 +1,23 @@
+names:
+  - Lion
+  - cat
+  - chicken
+  - cow
+  - dog
+  - elephant
+  - fox
+  - goat
+  - horse
+  - person
+  - raccoon
+  - skunk
+nc: 12
+roboflow:
+  license: Private
+  project: animal-detection-uua2x
+  url: https://app.roboflow.com/adimasdev-bkadt/animal-detection-uua2x/3
+  version: 3
+  workspace: adimasdev-bkadt
+test: ../test/images
+train: ../train/images
+val: ../valid/images
